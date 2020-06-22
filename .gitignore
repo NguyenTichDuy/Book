@@ -1,3 +1,4 @@
-Public/**/*
-!Public/**/Admin/
+Public/*
+!Public/Css/Admin/
+!Public/Css/Admin/*
 
