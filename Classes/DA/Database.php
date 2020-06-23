@@ -4,7 +4,7 @@
         private $host = "localhost";
         private $user = "root";
         private $pass = "";
-        private $dbname = "";
+        private $dbname = "reviewsach";
         private $con = null;
 
         function __construct()
