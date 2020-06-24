@@ -15,23 +15,23 @@
     img {
         width: 100pt;
         height: 100pt;
-        
     }
     </style>
-    
+   
+   
 </head>
 <body>
     <div class="container">
         <nav class="navbar navbar-expand-md bg-dark navbar-dark fixed-top">
-            <!-- Brand -->
+            Brand 
             <a class="navbar-brand" href="#">Navbar</a>
 
-            <!-- Toggler/collapsibe Button -->
+           
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
                 <span class="navbar-toggler-icon"></span>
             </button>
 
-            <!-- Navbar links -->
+           
             <div class="collapse navbar-collapse" id="collapsibleNavbar">
                 <ul class="navbar-nav">
                 <li class="nav-item">
@@ -79,7 +79,7 @@
             </div>
     </div>
 
-    <!-- body -->
+   
     <div class="container mt-5">
         <div class="row">
             <div class="col-xs-3 col-sm-3 col-md-3 col-lg-3">

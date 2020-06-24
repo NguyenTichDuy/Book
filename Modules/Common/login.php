@@ -2,47 +2,36 @@
 <html lang="en" dir="ltr">
   <head>
     <meta charset="utf-8">
-    <title>Admin | Login Admin</title>
+    <title>Đăng nhập | Review Sách</title>
   </head>
-  <?php
-    $admin = new Users();
-    if(!empty($_POST['username']) && !empty($_POST['password']))
-    {
-      $ls = $admin->db_get_list_user();
-      $user = $_POST['username'];
-      foreach($ls as $row)
-      {
-        if($_POST['password']==$row['MK'])
-        {
-          $_SESSION['TK']=$user;
-          header('location: http://localhost:8080/book/admin/?m=common&a=admin');
-        }
-      }
-    }
-  ?>
   <body>
-      <form action="" class="login-form" id="frmLG" method="POST">
+
+      <form class="login-form" id="frmLGU">
         <h1>Đăng nhập</h1>
 
         <div class="txtb jquery-validation-error">
           <input type="text" name="username">
-          <span data-placeholder="Tài khoản"></span>
+          <span data-placeholder="Tài khoản" ></span>
         </div>
 
         <div class="txtb jquery-validation-error">
           <input type="password" name="password">
-          <span data-placeholder="Mật khẩu"></span>
+          <span data-placeholder="Mật khẩu" ></span>
         </div>
 
         <input type="submit" class="logbtn" value="Đăng nhập">
 
-</form>
+        <div class="bottom-text">
+          Bạn chưa có tài khoản ?<a href="#">Đăng kí</a>
+        </div>
 
+      </form>
   </body>
 </html>
+<script src="Public/Js/jquery.validate.js"></script>
 <script>
   $(document).ready(function() {
- $("#frmLG").validate({
+ $("#frmLGU").validate({
      rules: {
       username: "required",
       password: "required"

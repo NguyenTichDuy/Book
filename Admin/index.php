@@ -6,7 +6,7 @@
 <link rel="stylesheet" href="../Public/Css/animate.css">
 <link rel="stylesheet" href="../Public/Css/icons.css">
 <link rel="stylesheet" href="../Public/Css/Admin/Login.css">
-<link rel="stylesheet" href="../Public/Css/style.css">
+<link rel="stylesheet" href="../Public/Css/styles.css">
 
 <script src="../Public/Js/jquery-3.4.1.min.js"></script>
 <script src="../Public/Js/bootstrap-4.3.1.js"></script>
@@ -32,6 +32,7 @@
         include_once('../Classes/DA/Session.php');
         include_once('../Classes/DA/role.php');
         include_once('../Classes/DA/helper.php');
+        include_once('../Classes/BL/users.php');
         include_once($path);
     }
     else
