@@ -1,96 +1,85 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <style>
+<style>
     body {
-        font-family: Arial, Helvetica, sans-serif;
+        background-image: none;
     }
-    .container-fluid {
-        padding-left: 0px;
-        padding-right: 0px;
-    }
-    img {
-        width: 100pt;
-        height: 100pt;
-        
-    }
-    </style>
-    
-</head>
-<body>
-    <div class="container">
-        <nav class="navbar navbar-expand-md bg-dark navbar-dark fixed-top">
-            <!-- Brand -->
-            <a class="navbar-brand" href="#">Navbar</a>
-
-            <!-- Toggler/collapsibe Button -->
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-
-            <!-- Navbar links -->
-            <div class="collapse navbar-collapse" id="collapsibleNavbar">
-                <ul class="navbar-nav">
-                <li class="nav-item">
-                    <a class="nav-link" href="#">Link</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#">Link</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#">Link</a>
-                </li>
-                </ul>
-            </div>
-            <form class="form-inline mb-n1" method="get" action="">
-                <div class="input-group">
-                    <input class="form-control" type="text" name="" placeholder="Search book" aria-label="Recipient's " aria-describedby="my-addon">
-                    <div class="input-group-append">
-                        <button type="button" class="btn btn-default input-group-text"><i class="fa fa-search"></i></button>
-                    </div>
-                </div>
-            </form>
-        </nav>
-    </div>
-    <div class="container-fluid mt-5" style="width:100%; height: 400px;">
-        <div id="my-carousel" class="carousel slide" data-ride="carousel" style="background-color: gray;">
-                <div class="carousel-inner" role="listbox">
-                    <div class="carousel-item active">
-                        <img class="d-block w-100 h-100" src="../Public/Images/Lam_ban_voi_bau_troi.jpg" alt="">
-                    </div>
-                    <div class="carousel-item ">
-                        <img class="d-block w-100 h-100" src="../Public/Images/Vo_nhat.jpg" alt="">
-                    </div>
-                    <div class="carousel-item ">
-                        <img class="d-block w-100 h-100 " src="../Public/Images/doi_lua_xung_doi.jpg" alt="">
-                    </div>
-                </div>
-                <a class="carousel-control-prev" href="#my-carousel" data-slide="prev" role="button">
-                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                    <span class="sr-only">Previous</span>
-                </a>
-                <a class="carousel-control-next" href="#my-carousel" data-slide="next" role="button">
-                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                    <span class="sr-only">Next</span>
-                </a>
-            </div>
-    </div>
-
-    <!-- body -->
-    <div class="container mt-5">
-        <div class="row">
-            <div class="col-xs-3 col-sm-3 col-md-3 col-lg-3">
-                sadfasd
-            </div>
-            <div class="col-xs-3 col-sm-3 col-md-3 col-lg-3">
-                sadfasd
-            </div>
+</style>
+<header>
+<div class="wrapper">
+    <!-- Sidebar -->
+    <nav id="sidebar">
+        <div class="sidebar-header">
+            <h3>Bootstrap Sidebar</h3>
         </div>
-        
-    </div>
 
-</body>
-</html>
+        <ul class="list-unstyled components">
+            <p>Dummy Heading</p>
+            <li class="active">
+                <a href="#homeSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">Home</a>
+                <ul class="collapse list-unstyled" id="homeSubmenu">
+                    <li>
+                        <a href="#">Home 1</a>
+                    </li>
+                    <li>
+                        <a href="#">Home 2</a>
+                    </li>
+                    <li>
+                        <a href="#">Home 3</a>
+                    </li>
+                </ul>
+            </li>
+            <li>
+                <a href="#">About</a>
+            </li>
+            <li>
+                <a href="#pageSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">Pages</a>
+                <ul class="collapse list-unstyled" id="pageSubmenu">
+                    <li>
+                        <a href="#">Page 1</a>
+                    </li>
+                    <li>
+                        <a href="#">Page 2</a>
+                    </li>
+                    <li>
+                        <a href="#">Page 3</a>
+                    </li>
+                </ul>
+            </li>
+            <li>
+                <a href="#">Portfolio</a>
+            </li>
+            <li>
+                <a href="#">Contact</a>
+            </li>
+        </ul>
+    </nav>
+</div>
+<div id="content">
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+                <div class="container-fluid">
+                    <button type="button" id="sidebarCollapse" class="btn btn-info">
+                        <i class="fas fa-align-left"></i>
+                        <span>Toggle Sidebar</span>
+                    </button>
+                    <button class="btn btn-dark d-inline-block d-lg-none ml-auto" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                        <i class="fas fa-align-justify"></i>
+                    </button>
+                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                        <ul class="nav navbar-nav ml-auto">
+                            <li class="nav-item active">
+                                <a class="nav-link" href="#">Page</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">Page</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">Page</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">Page</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+</div>
+</header>

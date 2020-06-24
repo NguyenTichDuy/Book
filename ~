@@ -1,0 +1,24 @@
++Add project and file .gitignore
+# Please enter the commit message for your changes. Lines starting
+# with '#' will be ignored, and an empty message aborts the commit.
+#
+# On branch master
+# Your branch is up to date with 'origin/master'.
+#
+# Changes to be committed:
+#	new file:   .gitignore
+#	new file:   .htaccess
+#	new file:   404.php
+#	new file:   Admin/Modules/Common/admin.php
+#	new file:   Admin/Modules/Common/login.php
+#	new file:   Admin/Modules/Common/logout.php
+#	new file:   Admin/Modules/Common/sign_up.php
+#	new file:   Admin/index.php
+#	new file:   Classes/BL/Account.php
+#	new file:   Classes/DA/Database.php
+#	new file:   Classes/DA/Helper.php
+#	new file:   Classes/DA/Role.php
+#	new file:   Classes/DA/Session.php
+#	new file:   Modules/Common/home.php
+#	new file:   index.php
+#

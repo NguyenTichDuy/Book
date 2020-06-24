@@ -6,13 +6,19 @@
 <link rel="stylesheet" href="Public/Css/jquery-ui.min.css">
 <link rel="stylesheet" href="Public/Css/animate.css">
 <link rel="stylesheet" href="Public/Css/icons.css">
+<link rel="stylesheet" href="Public/Css/animsition.min.css">
+<link rel="stylesheet" href="Public/Css/animsition.css">
+<link rel="stylesheet" href="Public/Css/bootstrap-progressbar-3.3.4.min.css">
 
 <script src="Public/Js/jquery-3.4.1.min.js"></script>
 <script src="Public/Js/bootstrap-4.3.1.js"></script>
 <script src="Public/Js/popper.min.js"></script>
 <script src="Public/Js/jquery.validate.js"></script>
 <script src="Public/Js/jquery-ui.min.js"></script>
-
+<script src="Public/Js/jquery-ui.min.js"></script>
+<script src="Public/Js/animsition.min.js"></script>
+<script src="Public/Js/animsition.js"></script>
+<script src="Public/Js/bootstrap-progressbar.min.js"></script>
 <?php
     $modules = isset($_GET['m']) ? $_GET['m'] : '';
     $action = isset($_GET['a']) ? $_GET['a'] : '';
