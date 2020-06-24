@@ -1,63 +1,38 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Đăng nhập</title>
+<title>Đăng kí | Review Sách</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
+<link href="css/style.css" rel="stylesheet" type="text/css" media="all" />
+<link rel="stylesheet" href="./css/register.css">
 </head>
 <body>
-    <div class="container">
-        <div class="d-flex justify-content-center h-100">
-            <div class="card">
-                <div class="card-header">
-                    <h3>Đăng kí</h3>
-                    <div class="d-flex justify-content-end social_icon">
-                        <span><i class="fa fa-facebook-square"></i></span>
-                        <span><i class="fa fa-google-plus-square"></i></span>
-                        <span><i class="fa fa-twitter-square"></i></span>
-                    </div>
-                </div>
-                <div class="card-body">
-                    <div class="form-group">
-                      <div class="input-group">
-                          <div class="input-group-prepend">
-                              <span class="input-group-text" id="my-addon">
-                              <i class="fa fa-user"></i>
-                              </span>
-                          </div>
-                          <input class="form-control" type="text" name="" placeholder="Tên người dùng" aria-label="Recipient's " aria-describedby="my-addon">
-                      </div>
-                    </div>
-                    <div class="form-group">
-                        <div class="input-group">
-                            <div class="input-group-prepend">
-                                <span class="input-group-text" id="my-addon">
-                                <i class="fa fa-key"></i>
-                                </span>
-                            </div>
-                            <input class="form-control" type="text" name="" placeholder="Mật khẩu" aria-label="Recipient's " aria-describedby="my-addon">
-                        </div>
-                    </div>
-                    <div class="checkbox remember align-items-center">
-                        <input type="checkbox" value="">
-                        <label>
-                            Nhớ mật khẩu
-                        </label>
-                    </div>
-                    <div class="form-group ">
-                        <input id="submit" class="form-control login_btn float-right" type="Submit" name="Login" value="Đăng nhập">
-                    </div>
-                </div>
-                <div class="card-footer">
-                    <div class="d-flex justify-content-center link">
-                        Bạn không có mật khẩu? <a href="#">Đăng kí</a>
-                    </div>
-                    <div class="d-flex justify-content-center link">
-                        <a href="#">Bạn quên mật khẩu</a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
+	<div class="main-w3layouts wrapper">
+		<h1>Tạo tài khoản</h1>
+		<div class="main-agileinfo">
+			<div class="agileits-top">
+				<form action="#" method="post">
+					<input class="text" type="text" name="Username" placeholder="Tài khoản" required="">
+					<input class="text email" type="email" name="email" placeholder="Email" required="">
+					<input class="text" type="password" name="password" placeholder="Mật khẩu" required="">
+					<input class="text w3lpass" type="password" name="password" placeholder="Nhập lại mật khẩu" required="">
+					<div class="wthree-text">
+						<label class="anim">
+							<input type="checkbox" class="checkbox" required="">
+							<span>Tôi đồng ý với điều khoản & dịch vụ</span>
+						</label>
+						<div class="clear"> </div>
+					</div>
+					<input type="submit" value="Đăng kí">
+				</form>
+				<p>Đã có tài khoản ?<a href="#"> Đăng nhập</a></p>
+			</div>
+		</div>
+		<div class="colorlibcopy-agile">
+			<p>© 2020 Bản quyền thuộc về Duy & Vương <a href="https://colorlib.com/" target="_blank">Review Sách</a></p>
+		</div>
+	</div>
 </body>
 </html>
