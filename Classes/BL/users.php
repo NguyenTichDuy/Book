@@ -84,5 +84,10 @@ class Users extends Database
    	  $sql = "select * from tkadmin";
    	  return $this->db_get_list($sql);
    }
+   function db_get_list_user_nd()
+   {
+   	  $sql = "select * from tknguoidung";
+   	  return $this->db_get_list($sql);
+   }
 }
 ?>

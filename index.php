@@ -33,6 +33,7 @@
         include_once('Classes/DA/Session.php');
         include_once('Classes/DA/Role.php');
         include_once('Classes/DA/Helper.php');
+        include_once('Classes/BL/users.php');
         
         include_once($path);
     }

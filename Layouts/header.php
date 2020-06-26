@@ -36,8 +36,8 @@
      </div>
      <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4 nav__color"> 
           <nav class="nav lg ">
-            <a class="nav-link active text-dark" href="#">Đăng nhập</a>
-            <a class="nav-link text-dark" href="#">Đăng ký</a>
+            <a class="nav-link active text-dark" href="http://localhost:8080/book/?m=common&a=login">Đăng nhập</a>
+            <a class="nav-link text-dark" href="http://localhost:8080/book/?m=common&a=register">Đăng ký</a>
           </nav>
      </div>
    </div>
