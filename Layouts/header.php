@@ -21,6 +21,7 @@
                  <a class="dropdown-item" href="#">Sách ngoại ngữ</a>
                  <a class="dropdown-item" href="#">Sách lãng mạng</a>
                  <a class="dropdown-item" href="#">Sách tiểu thuyết</a>
+                 <a class="dropdown-item" href="#">Sách khác</a>
                </div>
              </li>
              <li class="nav-item active">

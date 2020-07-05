@@ -4,7 +4,7 @@ class Database
    private $host = "localhost";
    private $user = "root";
    private $pass = "";
-   private $dbname = "reviewsach";
+   private $dbname = "sach";
    private $con = null;
 
    function __construct()

@@ -33,6 +33,7 @@
         include_once('../Classes/DA/role.php');
         include_once('../Classes/DA/helper.php');
         include_once('../Classes/BL/users.php');
+        include_once('../Classes/BL/TypeBook.php');
         include_once($path);
     }
     else
