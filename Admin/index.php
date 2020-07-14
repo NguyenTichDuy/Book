@@ -7,6 +7,7 @@
 <link rel="stylesheet" href="../Public/Css/icons.css">
 <link rel="stylesheet" href="../Public/Css/Admin/Login.css">
 <link rel="stylesheet" href="../Public/Css/styles.css">
+<link rel="stylesheet" href="../Public/Css/style_admin.css">
 
 <script src="../Public/Js/jquery-3.4.1.min.js"></script>
 <script src="../Public/Js/bootstrap-4.3.1.js"></script>
@@ -21,7 +22,7 @@
     if (empty($modules) || empty($action))
     {
         $modules = 'Common';
-        $action = 'login';
+        $action = 'admin';
     }
 
     $path = 'Modules/' . $modules . '/' .$action . '.php';
