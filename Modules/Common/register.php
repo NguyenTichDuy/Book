@@ -10,20 +10,16 @@
         <h1>Đăng kí</h1>
 
         <div class="txtb jquery-validation-error">
-          <input type="text" name="username">
-          <span data-placeholder="Tài khoản" ></span>
+          <input type="text" name="username" placeholder="Tài khoản">
         </div>
         <div class="txtb jquery-validation-error">
-          <input type="email" name="email">
-          <span data-placeholder="Tài khoản" ></span>
+          <input type="email" name="email" placeholder="Email">
         </div>
         <div class="txtb jquery-validation-error">
-          <input type="password" name="password" id="pw">
-          <span data-placeholder="Mật khẩu" ></span>
+          <input type="password" name="password" id="pw" placeholder="Mật khẩu">
         </div>
         <div class="txtb jquery-validation-error">
-          <input type="password" name="enterpassword">
-          <span data-placeholder="Nhập lại mật khẩu" ></span>
+          <input type="password" name="enterpassword" placeholder="Nhập lại mật khẩu" >
         </div>
         <input type="submit" class="logbtn" value="Đăng kí">
 

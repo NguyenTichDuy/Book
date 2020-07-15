@@ -25,13 +25,11 @@
         <h1>Đăng nhập</h1>
 
         <div class="txtb jquery-validation-error">
-          <input type="text" name="username">
-          <span data-placeholder="Tài khoản"></span>
+          <input type="text" name="username" placeholder="Tài khoản">
         </div>
 
         <div class="txtb jquery-validation-error">
-          <input type="password" name="password">
-          <span data-placeholder="Mật khẩu"></span>
+          <input type="password" name="password" placeholder="Mật khẩu">
         </div>
 
         <input type="submit" class="logbtn" value="Đăng nhập">
