@@ -47,8 +47,8 @@ if (!empty($_GET['id'])) {
     ];
     $name = $book->db_get_list_name_book($id);
     //var_dump($name);
-    if ($book->h->is_submit('delete_type') && $cat->db_delete_book($data)) {
-        $book->h->redirect($cat->h->get_url('book/admin/?m=book&a=listbook'));
+    if ($book->h->is_submit('delete_book') && $book->db_delete_book($data)) {
+        $book->h->redirect($book->h->get_url('book/admin/?m=book&a=listbook'));
     }
 }
 ?>

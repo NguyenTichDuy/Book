@@ -48,9 +48,9 @@ $data = [
     'TENSACH'=>$book->h->input_post('txtnamebook'),
     'TACGIA' => $book->h->input_post('txtauthor'),
     'NHAXUATBAN'=>$book->h->input_post('txtnxb'),
-    'MASACH' => $book->h->input_post('st_typebook')
+    'MALOAI' => $book->h->input_post('st_typebook')
 ];
-if ($book->h->is_submit('add_book') && $subcat->db_insert_book($data)) {
+if ($book->h->is_submit('add_book') && $book->db_insert_book($data)) {
     $book->h->redirect($book->h->get_url('book/admin/?m=book&a=listbook'));
 }
 

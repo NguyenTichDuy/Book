@@ -47,15 +47,16 @@ if (!empty($_GET['id'])) {
     $id = $_GET['id'];
     $row_book = $book->db_get_list_book_by_id($id);
     $data = [
-    'MASACH' => $book->h->input_post('txtidbook'),
+    'MASACH' =>$id,
     'TENSACH'=>$book->h->input_post('txtnamebook'),
     'TACGIA' => $book->h->input_post('txtauthor'),
     'NHAXUATBAN'=>$book->h->input_post('txtnxb'),
-    'MASACH' => $book->h->input_post('st_typebook')
+    'MALOAI' => $book->h->input_post('st_typebook')
     ];
-    if ($book->h->is_submit('edit_subcat') && $book->db_update_book($data)) {
+    if ($book->h->is_submit('edit_book') && $book->db_update_book($data)) {
         $book->h->redirect($book->h->get_url('book/admin/?m=book&a=listbook'));
     }
+   //var_dump($data);
 }
 ?>
 
@@ -66,15 +67,9 @@ if (!empty($_GET['id'])) {
             <form action="" method="post" id="main-form">
                 <div class="card border-dark">
                     <div class="card-header bg-info  text-white">
-                        <h3>Thêm Sách</h3>
+                        <h3>Sửa Sách</h3>
                     </div>
                     <div class="card-body">
-                        <div class="row">
-                            <div class="col-xs-9 col-sm-9 col-md-9 col-lg-9 form-group">
-                                <label>Mã Sách</label>
-                                <input type="text" name="txtidbook" class="form-control border-dark" value="<?php echo $row_book['MASACH'];?>">
-                            </div>
-                        </div>
                         <div class="row">
                             <div class="col-xs-9 col-sm-9 col-md-9 col-lg-9 form-group">
                                 <label>Tên Sách</label>
@@ -97,9 +92,9 @@ if (!empty($_GET['id'])) {
                             <div class="col-xs-9 col-sm-9 col-md-9 col-lg-9 form-group">
                                 <label>Loại sách</label>
                                 <select  name="st_typebook" class="form-control border-dark">
-                                    <option value="">-- Chọn loại sách --</option>
+                                    
                                     <?php foreach ($list_book as $row) { ?>
-                                        <option value="<?php echo $row['MALOAI']; ?>">
+                                        <option value="<?php echo $row['MALOAI'];?>" <?php echo ($row['MALOAI']==$row_book['MALOAI'])?'selected':'';?>>
                                             <?php echo $row['LOAISACH']; ?>
                                         </option>
                                     <?php } ?>
@@ -109,7 +104,7 @@ if (!empty($_GET['id'])) {
                     </div>
                     <div class="card-footer bg-info border-dark">
                         <input type="hidden" name="request_name" value="edit_book">
-                        <input class="btn btn-info" type="submit" value="Thêm">
+                        <input class="btn btn-info" type="submit" value="Lưu">
                         <a class="btn btn-info" href="<?php echo $tBook->h->get_url('book/admin/?m=book&a=listbook'); ?>">Trở Về</a>
                     </div>
                 </div>
