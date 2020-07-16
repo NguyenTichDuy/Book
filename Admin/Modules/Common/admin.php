@@ -28,7 +28,7 @@
             </center>
             <a href="http://localhost:8080/book/admin/?m=typebook&a=listtypebook"><i class="fas fa-book-medical"></i><span>Loại sách</span></a>
             <a href="http://localhost:8080/book/admin/?m=book&a=listbook"><i class="fas fa-book"></i><span>Sách</span></a>
-            <a href="#"><i class="fas fa-table"></i><span>Bài viết</span></a>
+            <a href="http://localhost:8080/book/admin/?m=posts&a=listposts"><i class="fas fa-table"></i><span>Bài viết</span></a>
             <a href="#"><i class="fas fa-comment-alt"></i><span>Bình luận</span></a>
             <a href="#" class="main_report"><i class="fas fa-th"></i><span>Thống kê</span></a>
             <a href="#"><i class="fas fa-users"></i><span>Tài khoản</span></a>

@@ -36,6 +36,7 @@
         include_once('../Classes/BL/users.php');
         include_once('../Classes/BL/TypeBook.php');
         include_once('../Classes/BL/Book.php');
+        include_once('../Classes/BL/Post.php');
         include_once($path);
     }
     else
