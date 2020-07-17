@@ -27,6 +27,12 @@ class Book extends Database
         $params = ['MASACH' => $id];
         return $this->db_get_row($sql, $params);
     }
+    function db_get_list_book_by_id_type($id)
+    {
+        $sql = "select * from sach where MALOAI=:MALOAI";
+        $params = ['MALOAI' => $id];
+        return $this->db_get_row($sql, $params);
+    }
 
     function db_insert_book($data)
     {

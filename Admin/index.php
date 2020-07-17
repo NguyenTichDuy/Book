@@ -15,6 +15,12 @@
 <script src="../Public/Js/jquery.validate.js"></script>
 <script src="../Public/Js/jquery-ui.min.js"></script>
 
+<!-- Summernote -->
+<link rel="stylesheet" href="../Public/summernote/summernote-bs4.min.css">
+<script src="../Public/summernote/summernote-bs4.min.js"></script>
+<!-- Ckeditor -->
+<script src="../Public/Ckeditor/ckeditor.js"></script> 
+
 <?php
     $modules = isset($_GET['m']) ? $_GET['m'] : '';
     $action = isset($_GET['a']) ? $_GET['a'] : '';

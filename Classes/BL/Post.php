@@ -22,14 +22,12 @@ class Post extends Database
 
    function db_insert_post($data)
    {
-      $sql ="insert into baiviet(MABAIVIET,ANH,TIEUDE,NOIDUNG,NGAYDANG,NGAYSUA,MASACH) values(:MABAIVIET,:ANH,:TIEUDE,:NOIDUNG,:NGAYDANG,:NGAYSUA,:MASACH)";
+      $sql ="insert into baiviet(MABAIVIET,ANH,TIEUDE,NOIDUNG,MASACH) values(:MABAIVIET,:ANH,:TIEUDE,:NOIDUNG,:MASACH)";
       $params = [
          'MABAIVIET'=>$data['MABAIVIET'],
          'ANH'=>$data['ANH'],
          'TIEUDE'=>$data['TIEUDE'],
          'NOIDUNG'=>$data['NOIDUNG'],
-         'NGAYDANG'=>$data['NGAYDANG'],
-         'NGAYSUA'=>$data['NGAYSUA'],
          'MASACH'=>$data['MASACH']
       ];
       if($this->db_execute($sql,$params))
@@ -40,14 +38,12 @@ class Post extends Database
 
    function db_update_post($data)
    {
-      $sql ="update baiviet set ANH=:ANH,TIEUDE=:TIEUDE,NOIDUNG=:NOIDUNG,NGAYDANG=:NOIDUNG,NGAYSUA=:NGAYSUA,MASACH=:MASACH where MABAIVIET=:MABAIVIET";
+      $sql ="update baiviet set ANH=:ANH,TIEUDE=:TIEUDE,NOIDUNG=:NOIDUNG,MASACH=:MASACH where MABAIVIET=:MABAIVIET";
       $params = [
          'MABAIVIET'=>$data['MABAIVIET'],
          'ANH'=>$data['ANH'],
          'TIEUDE'=>$data['TIEUDE'],
          'NOIDUNG'=>$data['NOIDUNG'],
-         'NGAYDANG'=>$data['NGAYDANG'],
-         'NGAYSUA'=>$data['NGAYSUA'],
          'MASACH'=>$data['MASACH']
       ];
       if($this->db_execute($sql,$params))
