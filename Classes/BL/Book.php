@@ -23,16 +23,16 @@ class Book extends Database
 
     function db_get_list_book_by_id($id)
     {
-        $sql = "select * from sach where MASACH=:MASACH";
-        $params = ['MASACH' => $id];
-        return $this->db_get_row($sql, $params);
-    }
-    function db_get_list_book_by_id_type($id)
-    {
         $sql = "select * from sach where MALOAI=:MALOAI";
         $params = ['MALOAI' => $id];
-        return $this->db_get_row($sql, $params);
+        return $this->db_get_list_condition($sql, $params);
     }
+    function db_get_name_book_by_id($id)
+   {
+      $sql = "select * from sach where MASACH=:MASACH";
+      $params = ['MASACH' => $id];
+      return $this->db_get_row($sql, $params);
+   }
 
     function db_insert_book($data)
     {

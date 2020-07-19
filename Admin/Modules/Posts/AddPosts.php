@@ -39,30 +39,37 @@
 				<div class="content">
                     <?php 
                         $posts=new Post();
-                        $type_book=new TypeBook();
+						$type_book=new TypeBook();
                         $list_type_book=$type_book->db_get_list_type_book(); 
-                        $imgname = ""; $posts->h->upload_file("file_avatar",$imgname); 
+						$imgname = ""; 
+						$posts->h->upload_file("file_avatar",$imgname); 
                         $data = 
-                        [ 'MASACH' => $posts->h->input_post('get_namebook'),
-                         'MABAIVIET'=>$posts->h->input_post('txt_id_post'), 
-                         'ANH' => $imgname, 'TIEUDE'=>$posts->h->input_post('txt_title'), 
-                         'NOIDUNG' => $posts->h->input_post('txt_content') ]; 
+                        [ 
+							'MASACH' => $posts->h->input_post('get_namebook'),
+                         	'MABAIVIET'=>$posts->h->input_post('txt_id_post'), 
+							'ANH' => $imgname, 
+							'TIEUDE'=>$posts->h->input_post('txt_title'), 
+						 	'NOIDUNG' => $posts->h->input_post('txt_content') 
+						]; 
                         if ($posts->h->is_submit('add_post') && $posts->db_insert_post($data)) 
                         { 
-                            $posts->h->redirect($posts->h->get_url('http://localhost:8080/book/admin/?m=posts&a=listposts')); 
-                    } ?>
+							$posts->h->redirect($posts->h->get_url('/book/admin/?m=posts&a=listposts')); 
+						} 
+					?>
 					<script>
-						function getbookbyid(bookid) {
-						        $.ajax({
-						            type: 'Get',
-						            url: 'http://localhost:8080/book/admin/?m=posts&a=getbookbyid',
-						            dataType: 'text',
-						            data: 'bookid=' + bookid,
-						            success: function(result) {
-						                $('#get_namebook').html(result);
-						            }
-						        });
-						    }
+						function getbookbyid(bookid) 
+						{
+							$.ajax({
+								type: 'Get',
+								url: 'http://localhost:8080/book/admin/?m=posts&a=getbookbyid',
+								dataType: 'text',
+								data: 'bookid=' + bookid,
+								success: function(result) 
+								{
+									$('#get_namebook').html(result);
+								}
+							});
+						}	
 					</script>
 					<div class="container">
 						<div class="row mt-5">
@@ -80,7 +87,7 @@
 														<option value="">-- Chọn chủ đề sách--</option>
 														<?php foreach ($list_type_book as $row) { ?>
 														<option value="<?php echo $row['MALOAI']; ?>">
-															<?php echo $row[ 'LOAISACH']; ?>
+															<?php echo $row['LOAISACH']; ?>
 														</option>
 														<?php } ?>
 													</select>
@@ -136,5 +143,4 @@
 		</div>
 	</main>
 </body>
-
 </html>

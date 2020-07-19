@@ -5,7 +5,6 @@
 <link rel="stylesheet" href="../Public/Css/jquery-ui.min.css">
 <link rel="stylesheet" href="../Public/Css/animate.css">
 <link rel="stylesheet" href="../Public/Css/icons.css">
-<link rel="stylesheet" href="../Public/Css/Admin/Login.css">
 <link rel="stylesheet" href="../Public/Css/styles.css">
 <link rel="stylesheet" href="../Public/Css/style_admin.css">
 
@@ -28,7 +27,7 @@
     if (empty($modules) || empty($action))
     {
         $modules = 'Common';
-        $action = 'admin';
+        $action = 'login';
     }
 
     $path = 'Modules/' . $modules . '/' .$action . '.php';
