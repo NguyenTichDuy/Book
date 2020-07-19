@@ -17,11 +17,17 @@ class Users extends Database
       $params = ['userid'=>$id];
       return $this->db_get_row($sql, $params);
    } 
-
-   function db_get_user_by_username($username)
+   
+   function db_get_user_by_username_password($username, $password)
    {
-      $sql = "select * from tblusers where username=:username";
-      $params = ['username'=>$username];
+      $sql = "select * from taikhoan where TAIKHOAN=:username and MATKHAU=:password";
+      $params = ['username'=>$username, 'password' => $password];
+      return $this->db_get_row($sql, $params);
+   }
+   function db_get_user_by_password($password)
+   {
+      $sql = "select * from tblusers where password=:password";
+      $params = ['password'=>$password];
       return $this->db_get_row($sql, $params);
    }  
 

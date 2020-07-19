@@ -7,6 +7,8 @@
 <link rel="stylesheet" href="../Public/Css/icons.css">
 <link rel="stylesheet" href="../Public/Css/styles.css">
 <link rel="stylesheet" href="../Public/Css/style_admin.css">
+<link rel="stylesheet" href="css/Login.css">
+
 
 <script src="../Public/Js/jquery-3.4.1.min.js"></script>
 <script src="../Public/Js/bootstrap-4.3.1.js"></script>

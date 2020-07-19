@@ -8,35 +8,70 @@
     $admin = new Users();
     if(!empty($_POST['username']) && !empty($_POST['password']))
     {
-      $ls = $admin->db_get_list_user();
-      $user = $_POST['username'];
-      foreach($ls as $row)
+      if(!empty($admin->db_get_user_by_username_password($_POST['username'], $_POST['password'])))
       {
-        if($_POST['password']==$row['MK'])
-        {
-          $_SESSION['TK']=$user;
+          $_SESSION['TK']=$_POST['username'];
           header('location: http://localhost:8080/book/admin/?m=common&a=admin');
-        }
       }
     }
   ?>
-  <body>
-      <form action="" class="login-form" id="frmLG" method="POST">
-        <h1>Đăng nhập</h1>
-
-        <div class="txtb jquery-validation-error">
-          <input type="text" name="username" placeholder="Tài khoản">
+<body>
+  <form action="" method="post" id="frmLG">
+    <div class="containertop">
+        <div class="d-flex justify-content-center h-100">
+            <div class="card">
+                <div class="card-header">
+                    <h3>Đăng nhập</h3>
+                    <div class="d-flex justify-content-end social_icon">
+                        <span><i class="fa fa-facebook-square"></i></span>
+                        <span><i class="fa fa-google-plus-square"></i></span>
+                        <span><i class="fa fa-twitter-square"></i></span>
+                    </div>
+                </div>
+                <div class="card-body">
+                    <div class="form-group">
+                      <div class="input-group">
+                          <div class="input-group-prepend">
+                              <span class="input-group-text" id="my-addon">
+                              <i class="fa fa-user"></i>
+                              </span>
+                          </div>
+                          <input class="form-control" type="text" name="username" placeholder="Tên người dùng" aria-label="Recipient's " aria-describedby="my-addon">
+                      </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="input-group">
+                            <div class="input-group-prepend">
+                                <span class="input-group-text" id="my-addon">
+                                <i class="fa fa-key"></i>
+                                </span>
+                            </div>
+                            <input class="form-control" type="text" name="password" placeholder="Mật khẩu" aria-label="Recipient's " aria-describedby="my-addon">
+                        </div>
+                    </div>
+                    <div class="checkbox remember align-items-center">
+                        <input type="checkbox" value="">
+                        <label>
+                            Nhớ mật khẩu
+                        </label>
+                    </div>
+                    <div class="form-group ">
+                        <input id="submit" class="form-control login_btn float-right" type="Submit" name="Login" value="Đăng nhập">
+                    </div>
+                </div>
+                <div class="card-footer">
+                    <div class="d-flex justify-content-center link">
+                        Bạn không có mật khẩu? <a href="#">Đăng kí</a>
+                    </div>
+                    <div class="d-flex justify-content-center link">
+                        <a href="#">Bạn quên mật khẩu</a>
+                    </div>
+                </div>
+            </div>
         </div>
-
-        <div class="txtb jquery-validation-error">
-          <input type="password" name="password" placeholder="Mật khẩu">
-        </div>
-
-        <input type="submit" class="logbtn" value="Đăng nhập">
-
-</form>
-
-  </body>
+    </div>    
+  </form>
+</body>
 </html>
 <script>
   $(document).ready(function() {
